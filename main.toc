@@ -8,13 +8,19 @@
 \contentsline {section}{\numberline {1.4}从Newton宇宙到相对论宇宙}{10}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}均匀及各向同性空间的几何}{11}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Einstein方程和宇宙演化}{13}{subsection.1.4.2}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}广义相对论简介}{15}{appendix.A}%
-\contentsline {section}{\numberline {A.1}等效原理}{15}{section.A.1}%
-\contentsline {section}{\numberline {A.2}广义相对性原理与广义协变原理}{15}{section.A.2}%
-\contentsline {section}{\numberline {A.3}度规}{15}{section.A.3}%
-\contentsline {section}{\numberline {A.4}张量、矢量与标量}{16}{section.A.4}%
-\contentsline {section}{\numberline {A.5}仿射联络}{17}{section.A.5}%
-\contentsline {section}{\numberline {A.6}引力效应引起的时间膨胀}{18}{section.A.6}%
-\contentsline {section}{\numberline {A.7}协变导数}{19}{section.A.7}%
-\contentsline {section}{\numberline {A.8}Lie导数}{19}{section.A.8}%
-\contentsline {section}{\numberline {A.9}相对论性与非相对论性理想流体}{20}{section.A.9}%
+\contentsline {subsection}{\numberline {1.4.3}Friedmann方程}{14}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}两个常见的宇宙学参数}{16}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}膨胀宇宙的各种模式}{16}{subsection.1.4.5}%
+\contentsline {section}{\numberline {1.5}其他的宇宙模型}{20}{section.1.5}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}极早期宇宙}{21}{chapter.2}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}广义相对论简介}{23}{appendix.A}%
+\contentsline {section}{\numberline {A.1}等效原理}{23}{section.A.1}%
+\contentsline {section}{\numberline {A.2}广义相对性原理与广义协变原理}{23}{section.A.2}%
+\contentsline {section}{\numberline {A.3}度规}{23}{section.A.3}%
+\contentsline {section}{\numberline {A.4}张量、矢量与标量}{24}{section.A.4}%
+\contentsline {section}{\numberline {A.5}仿射联络}{25}{section.A.5}%
+\contentsline {section}{\numberline {A.6}引力效应引起的时间膨胀}{26}{section.A.6}%
+\contentsline {section}{\numberline {A.7}协变导数}{27}{section.A.7}%
+\contentsline {section}{\numberline {A.8}Lie导数}{28}{section.A.8}%
+\contentsline {section}{\numberline {A.9}等度规映射与Killing矢量场}{30}{section.A.9}%
+\contentsline {section}{\numberline {A.10}相对论性与非相对论性理想流体}{31}{section.A.10}%

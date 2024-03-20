@@ -12,8 +12,10 @@
 \usepackage{mboxfill}
 \usepackage{ctex}
 \usepackage{amsmath}
-\usepackage{caption}
+\usepackage{lipsum} %随机文本
+\usepackage{pifont}
 \usepackage{amsthm}
+\usepackage{caption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\xtjc}[1]{\textbf{\textit{#1}}}
 \renewcommand{\proofname}{\indent\bf 证明}%将证明两个字加粗
@@ -29,6 +31,7 @@
 	\popQED\endtrivlist\@endpefalse
 }
 \makeatother   %去掉证明环境中证明两字后面的.
+\captionsetup[figure]{labelsep=space}
 %%%%%%%%%%%%%%%%%%导言区%%%%%%%%%%%%%%%%%%%
 
 
@@ -94,7 +97,7 @@
 	\includegraphics[width=5.36cm,height=4.4cm]{figures/坐标.eps}
 	\caption{共动坐标示意图，A、B两点的坐标不随时间的变化而改变.}
 \end{figure} 
-可以看到A、B两点间速度与距离的比值等于$\dot{a}$与$a$的比值$H(t)$,我们称其为\textbf{Hubble常数}.尽管我们称其为“常数”，但可以看到其是与时间有关的一个量，它仅仅与坐标无关.所以其更为恰当的名字应该是“Hubble参数”或者“Hubble函数”，但按照惯例，我们还是称其为Hubble常数.上述A、B两点位置的选取是随意的，我们可以把该结论推广到宇宙中任意两个星系
+可以看到A、B两点间速度与距离的比值等于$\dot{a}$与$a$的比值$H(t)$,我们称其为\textbf{Hubble常数},常取Hubble常数的单位为$km\cdot s^{-1}\cdot Mpc^{-1}$.尽管我们称其为“常数”，但可以看到其是与时间有关的一个量，它仅仅与坐标无关.所以其更为恰当的名字应该是“Hubble参数”或者“Hubble函数”，但按照惯例，我们还是称其为Hubble常数.上述A、B两点位置的选取是随意的，我们可以把该结论推广到宇宙中任意两个星系
 \begin{equation}\label{1.4}
 	\xtjc{v}=H(t)\xtjc{r}
 \end{equation}
@@ -136,7 +139,7 @@ Hubble常数在目前时刻的值$H_0$可以通过测量那些本动速度远小
 	m\ddot{R}=-G\frac{mM}{R^2}=-\frac{4\pi}{3}Gm\frac{M}{(4\pi/3)R^3}R
 \end{equation}
 利用\hyperref[1.5]{1.5}式中定义的物质密度，并代入$R(t)=a(t)\chi$,有
-\begin{equation}
+\begin{equation}\label{1.9}
 	\ddot{a}=-\frac{4\pi G}{3}\rho a
 \end{equation}
 最后的结果中的粒子质量和球面共动坐标都消掉了.这是我们得到的第二个动力学方程.
@@ -186,11 +189,11 @@ Hubble常数在目前时刻的值$H_0$可以通过测量那些本动速度远小
 \Big(\frac{dR}{dt}\Big)^2-\frac{8\pi G}{3}\rho R^2=-k
 \end{equation}
 其中$k$为积分常数.考虑\hyperref[1.1]{1.1}式与\hyperref[1.4]{1.4}式，有
-\begin{equation}
-	H^2+\frac{k}{a^2}=\frac{8\pi G}{3}
+\begin{equation}\label{1.21}
+	H^2+\frac{k}{a^2}=\frac{8\pi G}{3}\rho
 \end{equation}
 这就是我们得到的最后一个方程.\par 
-本节我们并没有进行过多的讲解，仅仅是推导出了一些基本的公式.更多详细的讲解我们会放到下一节来讲述.我们将会就看到，用牛顿力学得到的结果，与广义相对论的结果基本相同，这归功于宇宙学原理.宇宙学原理告诉我们，宇宙各个局部的运动状态都是一样的，因此我们可以在一个足够小的局部范围内来研究宇宙膨胀运动.在小范围内，星体的相对运动速度小于光速$c$，所以可以应用牛顿理论.而对于大尺度的问题，如高红移天体、距离、光度等，牛顿力学就不适用了.
+本节我们并没有进行过多的讲解，仅仅是推导出了一些基本的公式.更多详细的讲解我们会放到下一节来讲述.我们将会就看到，用牛顿力学得到的结果，与广义相对论的结果基本相同，这归功于宇宙学原理.宇宙学原理告诉我们，宇宙各个局部的运动状态都是一样的，因此我们可以在一个足够小的局部范围内来研究宇宙膨胀运动.在小范围内，星体的相对运动速度小于光速$c$，所以可以应用牛顿理论.而对于大尺度的问题，牛顿力学就不适用了.
 \section{从Newton宇宙到相对论宇宙}
 广义相对论可以推出数学上自洽的宇宙理论，但Newton理论不行.并且广义相对论相比于Newton描述还能带来一系列重要的变化.首先，Einstein的理论指出几何是动力学的，且为宇宙的物质成分所决定.其次，广义相对论能描述以相对论性的速度运动并且具有任意压强的物质.我们知道在大爆炸之后的10万年内，宇宙是由压强等于其能量密度的三分之一的辐射主导的.此外，有证据表面在今天大多数的能量密度具有负压强.为了理解这些宇宙历史中重要的时间段，我们只能超出Newton引力的范畴而转向完全相对论性的理论.
 \subsection{均匀及各向同性空间的几何}
@@ -243,7 +246,7 @@ Hubble常数在目前时刻的值$H_0$可以通过测量那些本动速度远小
 	r=\frac{\tilde{r}}{1+k\tilde{r}^2/4}
 \end{equation}
 引入重标度的半径坐标$\tilde{r}$，可以将度规重新写为均匀且各向同性的形式：
-\begin{equation}
+\begin{equation}\label{1.32}
 	dl^2=a^2\frac{d\tilde{x}^2+d\tilde{y}^2+d\tilde{z}^2}{(1+k\tilde{r}^2/4)}
 \end{equation}
 其中
@@ -315,6 +318,313 @@ V(\chi_0)=\frac{4\pi(a\chi_0)^3}{3}+\cdots
 \end{equation}
 因为坐标$\chi$可以从0变到$\infty$,所以双曲空间的总体积是无限的.其三角形内角和小于180°.
 \subsection{Einstein方程和宇宙演化}
+在狭义相对论的平直时空中我们考虑的是Minkowski时空，其度规为
+\begin{equation}
+	ds^2=-dt^2+d\xtjc{x}^2
+\end{equation}
+Minkowski度规适合描述一些范围较小的时空区域，如在地球上进行的各种实验.但是，在宇宙尺度上，Minkowski度规需要被替换，这样它才能捕捉到宇宙正在膨胀的事实。我们只需做一个非常直接的替换,将$d\xtjc{x}^2$替换为上一节中的$dl^2$即可：
+\begin{equation}
+	ds^2=-dt^2+a^2\Big(\frac{dr^2}{1-kr^2}+r^2(d\theta^2+sin^2\theta d\varphi^2)\Big)\equiv g_{\mu\nu}dx^\mu dx^\nu
+\end{equation}
+其中的时空度规$g_{\mu\nu}$称为Fridemann-Lemaitre-Robert-Walker度规，简称FLRW度规.在上一节的\hyperref[1.32]{1.32}式中我们也展现了该度规是符合宇宙学基本原理的，所以这是一个非常自然的假设.上面引入的空间坐标都是共动的，也就是说，所有本动速度为0的天体的坐标$r,\theta ,\phi$都是常数.此外，坐标$t$是一个共动观测者测量到的固有时.\par 
+在广义相对论中，引力场方程为
+\begin{equation}
+	R_{\mu \nu}-\frac{1}{2}g_{\mu \nu}R\textcolor{gray}{+\varLambda g_{\mu \nu}}=8\pi GT_{\mu \nu}
+\end{equation}
+其中Ricci张量为
+\begin{equation}\label{1.50}
+	R_{\mu\nu}=\Gamma^{\lambda}_{\mu\nu,\lambda}-\Gamma^{\lambda}_{\mu\lambda,\nu}+\Gamma^{\lambda}_{\mu\nu}\Gamma^{\rho}_{\lambda \rho}-\Gamma^{\rho}_{\mu\lambda}\Gamma^{\lambda}_{\nu \rho}
+\end{equation}
+Christoffel联络为
+\begin{equation}\label{1.51}
+	\Gamma^{\lambda}_{\mu \nu}=\frac{1}{2} g^{\lambda \rho}\Big[\frac{\partial g_{\rho \mu}}{\partial x^{\nu}}+\frac{\partial g_{\rho \nu}}{\partial x^{\mu}}-\frac{\partial g_{\mu \nu}}{\partial x^{\rho}}\Big]
+\end{equation}
+对引力场方程两边与$g^{\mu\nu}$缩并,有
+\begin{equation}
+	R-2R\textcolor{gray}{+4\varLambda}=8\pi GT
+\end{equation}
+代回引力场方程，有
+\begin{equation}\label{1.53}
+	R_{\mu\nu}\textcolor{gray}{-\varLambda g_{\mu\nu}}=8\pi G(T_{\mu\nu}-\frac{1}{2}g_{\mu\nu}T)
+\end{equation}
+在大尺度结构上，物质可近似为理想流体，其能量-动量张量可写为
+\begin{equation}
+	T_{\mu \nu }=pg_{\mu \nu }+(\rho +p)U_{\mu }U_{\nu}
+\end{equation}
+其中$\rho$为能量密度，$p$为压强.如果宇宙是由极端相对论性的气体组成的，那么物态方程就是$p=\rho/3$.在宇宙学中，很多情况下有$p=w\rho$,其中$w$是个常数.
+\subsection{Friedmann方程}
+现在我们考虑相对论性的物质的时候，我们该如何修改Newton的三个宇宙演化方程\hyperref[1.6]{1.6}式、\hyperref[1.9]{1.9}式以及\hyperref[1.21]{1.21}式呢？最为直接的做法自然是解引力场方程了.\par 
+首先我们来计算仿射联络的各个分量，根据\hyperref[1.51]{1.51}式，我们可以得到仿射联络各个非0的分量为
+\begin{equation}
+	\Gamma^{t}_{rr}=\frac{a\dot{a}}{1-kr^2},	\Gamma^{t}_{\theta\theta}=r^2a\dot{a},
+	\Gamma^{t}_{\varphi\varphi}=r^2a\dot{a}sin^2\theta
+	 \notag
+\end{equation}
+\begin{equation}
+	\Gamma^{r}_{rr}=\frac{kr}{1-kr^2},
+	\Gamma^{r}_{\theta\theta}=kr^3-r,
+	\Gamma^{r}_{\varphi\varphi}=(kr^3-r)sin^2\theta\notag
+\end{equation}
+\begin{equation}
+	\Gamma^{\theta}_{\varphi\varphi}=-sin\theta cos\theta\notag
+\end{equation}
+\begin{equation}
+\Gamma^{r}_{tr}=\Gamma^{r}_{rt}=
+\Gamma^{\theta}_{t\theta}=\Gamma^{\theta}_{\theta t}=	\Gamma^{\varphi}_{t\varphi}=\Gamma^{\varphi}_{\varphi t}=\frac{\dot{a}}{a} \notag
+\end{equation}
+\begin{equation}
+	\Gamma^{\theta}_{r\theta}=\Gamma^{\theta}_{\theta r}=
+	\Gamma^{\varphi}_{r\varphi}=\Gamma^{\varphi}_{\varphi r}=\frac{1}{r} \notag
+\end{equation}
+\begin{equation}
+	\Gamma^{\varphi}_{\theta\varphi}=\Gamma^{\varphi}_{\varphi\theta}=cot\theta \notag
+\end{equation}
+先计算Einstein场方程的时间分量，根据\hyperref[1.50]{1.50}式可以得到
+\begin{align}
+	R_{tt}={}&-\Gamma^{r}_{tr,t}-\Gamma^{\theta}_{t\theta,t}-\Gamma^{\varphi}_{t\varphi,t}-\Gamma^{r}_{tr}\Gamma^{r}_{tr}-\Gamma^{\theta}_{t\theta}\Gamma^{r}_{tr}-\Gamma^{\varphi}_{t\varphi}\Gamma^{\varphi}_{t\varphi} \notag\\ 
+	={}& -3\frac{\ddot{a}}{a}
+\end{align}
+又由于$T_{00}=\rho,T_{0i}=T_{i0}=0,T_{ij}=pg_{ij}$,故$T=g^{\mu\nu}T_{\mu\nu}=-\rho+3p$.
+根据\hyperref[1.53]{1.53}式，我们可以得到
+\begin{equation}
+	R_{tt}\textcolor{gray}{-\varLambda g_{tt}}=8\pi G(T_{tt}-\frac{1}{2}g_{tt}T)
+\end{equation}
+即
+\begin{equation}\label{1.57}
+	\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}(\rho +3p)\textcolor{gray}{+\frac{\varLambda}{3}}
+\end{equation}
+再计算Einstein场方程的空间分量，以径向为例，根据\hyperref[1.50]{1.50}式，有
+\begin{align}
+	R_{rr}={}&\Gamma^{\lambda}_{rr,\lambda}-\Gamma^{\lambda}_{r\lambda,r}+\Gamma^{\lambda}_{rr}\Gamma^{\rho}_{\lambda\rho}-\Gamma^{\rho}_{r\lambda}\Gamma^{\lambda}_{r\rho}-\Gamma^{r}_{rr,r}-\Gamma^{\theta}_{r\theta,r}-\Gamma^{\varphi}_{r\varphi,r} \notag \\
+	&+\Gamma^{t}_{rr,t}+\Gamma^{r}_{rr,r}-\Gamma^{r}_{rr}\Gamma^{r}_{rr}-\Gamma^{t}_{rr}\Gamma^{r}_{rt}-\Gamma^{\theta}_{r\theta}\Gamma^{\theta}_{r\theta}-\Gamma^{\varphi}_{r\varphi}\Gamma^{\varphi}_{r\varphi} \notag \\
+	&+\Gamma^{r}_{rr}\Gamma^{r}_{rr}+\Gamma^{t}_{rr}\Gamma^{r}_{tr}+\Gamma^{t}_{rr}\Gamma^{\theta}_{t\theta}+\Gamma^{t}_{rr}\Gamma^{\varphi}_{t\varphi}+\Gamma^{r}_{rr}\Gamma^{\theta}_{r\theta}+\Gamma^{r}_{rr}\Gamma^{\varphi}_{r\varphi} \notag \\
+	={}& \frac{a\ddot{a}+2\dot{a}^2+2k}{1-kr^2}
+\end{align}
+再根据\hyperref[1.53]{1.53}式，有
+\begin{equation}
+		R_{rr}\textcolor{gray}{-\varLambda g_{rr}}=8\pi G(T_{rr}-\frac{1}{2}g_{rr}T)
+\end{equation}
+即
+\begin{equation}
+	\frac{\ddot{a}}{a}+2H^2+\frac{2k}{a^2}\textcolor{gray}{-\varLambda}=4\pi G(\rho-p)
+\end{equation}
+联立\hyperref[1.57]{1.57}式，得
+\begin{equation}\label{1.61}
+	H^2+\frac{k}{a^2}=\frac{8\pi G}{3}\rho \textcolor{gray}{+\frac{\varLambda}{3}}
+\end{equation}
+\hyperref[1.57]{1.57}和\hyperref[1.61]{1.61}式分别称为Friedmann第一方程与Friedmann第二方程.
+最后，根据能量-动量守恒律
+\begin{equation}
+	T^{\mu t}_{~~;\mu}=0
+\end{equation}
+即
+\begin{align}
+	-g^{\mu\rho}T_{\rho t;\rho}={}&-g^{\mu\rho}\Big(\frac{\partial T_{\mu t}}{\partial x^\mu}-\Gamma^{\lambda}_{\mu \mu}T_{\lambda 0}-\Gamma^{\lambda}_{t\mu}T_{\mu \lambda}\Big)\notag \\
+	={}& \frac{\partial \rho}{\partial t}+g^{rr}\Gamma^t_{rr}T_{tt}+g^{\theta\theta}\Gamma^t_{\theta\theta}T_{tt}+g^{\varphi\varphi}\Gamma^t_{rr}T_{\varphi\varphi}\notag \\
+	&+g^{rr}\Gamma^r_{tr}T_{rr}+g^{\theta\theta}\Gamma^\theta_{t\theta}T_{rr}+g^{\varphi\varphi}\Gamma^\varphi_{t\varphi}T_{\varphi\varphi} \notag \\
+	={}&\frac{\partial \rho}{\partial t}+3H(\rho+p) \notag \\
+	={}& 0 \notag
+\end{align}
+由于宇宙空间是均匀且各项同性的，故
+\begin{equation}
+	\frac{\partial \rho}{\partial t}=\frac{d\rho}{dt}
+\end{equation}
+最终我们得到
+\begin{equation}\label{1.64}
+	\dot{\rho}=-3H(\rho+p)
+\end{equation}
+现在，若不考虑宇宙学因子$\varLambda$,我们得到了三个动力学方程：\par 
+\centerline{$Relativity\left\{\begin{array}{l l}{\dot{\rho}=-3H(\rho+p)}\\ {\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}(\rho+3p)}\\ {{H^2+\frac{k}{a^2}=\frac{8\pi G}{3}\rho}}\end{array}\right.$}
+对比Newton宇宙学中的三个动力学方程：\par 
+\centerline{$Newton\left\{\begin{array}{l l}{\dot{\rho}=-3H\rho}\\ {\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}\rho}\\ {{H^2+\frac{k}{a^2}=\frac{8\pi G}{3}\rho}}\end{array}\right.$}
+可以发现它们竟是如此的相像！区别在于相对论宇宙学中，由于$p$不可忽略，故相对论宇宙的动力学方程中考虑了$p$的影响；而$k$不再作为积分常数出现，而是具有明确的意义，为空间的曲率；并且$\rho$在这里不是物质的密度而是能量密度.\par 
+最后必须一提的是，这三个方程并不是独立的，联立两个Friedmann方程，我们可以得到
+\begin{equation}\label{1.65}
+	\frac{2\ddot{a}}{a}+\Big(\frac{\dot{a}}{a}\Big)^2+\frac{k}{a^2}=-8\pi Gp
+\end{equation}
+再将其与Friedmann第二方程联立即可得到\hyperref[1.64]{1.64}式.而未知参数有$\rho(t)$、$a(t)$和$p(t)$.故除了Friedmann方程外，我们还需要一个物态方程$p=p(\rho)$，这样才能构成一组完备方程.故这组方程的解以及宇宙的未来不但依赖于几何，还依赖于物态方程.
+\subsection{两个常见的宇宙学参数}
+现在我们引入两个宇宙学研究中常见的参数.\par 
+\leftline{\textbf{\ding{172}无量纲密度参量$\Omega_0$}}\par
+我们定义如下无量纲的密度参量
+\begin{equation}
+	\Omega_0=\Omega(t_0)\equiv\frac{1}{\rho_c}(\rho_0+3p_0) =\frac{\rho_0}{\rho_c}(1+3\alpha_0)
+\end{equation}
+其中$t_0$表示某一特定的时刻,$\rho_c\equiv\frac{3H_0^2}{8\pi G}$,称为宇宙临界密度.$\alpha_0\equiv\frac{p_0}{\rho_0}$.其具体的取值与宇宙的物质组成有关：\par
+\centerline{$\alpha_0=\left\{\begin{array}{l l}{-1,~Vacuum}\\ {\approx0，~Nonrelativistic~particle}\\
+		{1/3,Relativistic~particle}\\ {{1,~Massless~ scalar~ field}}\end{array}\right.$}
+根据Friedmann第二方程，此时$\Omega_0$的具体大小就会决定宇宙的空间形状：\par
+\centerline{$\left\{\begin{array}{l l}{\Omega_0>1,k=1,~Closed ~universe}\\ {\Omega_0=1,k=0,Flat~ universe}\\ {{\Omega_0<1,k=-1,Open~universe}}\end{array}\right.$}
+不同宇宙随时间的演化我们按下不表，先看看另外一个参数.\par
+\leftline{\textbf{\ding{173}宇宙减速因子$q$}}\par
+对于Hubble常数$H$,有
+\begin{equation}
+	\frac{dH}{dt}=\frac{d}{dt}\Big[\frac{1}{R}\frac{dR}{dt}\Big]=\frac{1}{R}\frac{d^2R}{dt^2}-\frac{1}{R^2}\Big(\frac{dR}{dt}\Big)^2=H^2\Big[R\Big(\frac{dR}{dt}\Big)^{-2}\frac{d^2R}{dt^2}-1\Big]
+\end{equation}
+定义宇宙减速因子$q(t)\equiv R(\frac{dR}{dt})^{-2}\frac{d^2R}{dt^2}$.根据Friedmann方程，可以发现$q(t)=-\frac{1}{H^2}\frac{\ddot{a}}{a}$.此时Hubble常数随时间的变化关系可写为
+\begin{equation}
+	\frac{dH}{dt}=-H^2(1+q)
+\end{equation}
+而我们引入的这两个参数并不是毫不相关的，根据\hyperref[1.57]{1.57}式可知
+\begin{equation}
+	q=\frac{4\pi G}{3H^2}(\rho+3p)=\frac{\rho+3p}{2\rho_c}=\frac{1}{2}\Omega
+\end{equation}
+即$q_0=\frac{1}{2}\Omega_0$.
+\subsection{膨胀宇宙的各种模式}
+在求得宇宙的演化方程之前，我们需要假定宇宙的物质组成是什么，因为这直接影响到物态方程$p=\rho(p)$.宇宙的内容物可以大致分为两大类：静质量非0的粒子称为\textbf{物质}或\textbf{尘埃}，而静质量为0的则称为\textbf{辐射}.根据组成物质的不同，我们假设物态方程为
+\begin{equation}
+	p=w\rho
+\end{equation}
+其中$w$为常数.\par 那么将该式代入\hyperref[1.64]{1.64}式可以得到
+\begin{equation}
+	\dot{\rho}=3H\rho(w+1)
+\end{equation}
+利用\hyperref[1.3]{1.3}式，我们可以得到
+\begin{equation}
+	\dot{\rho}a-3\rho a(w+1)=0
+\end{equation}
+即
+\begin{equation}
+	\frac{d}{dt}(\rho a^{3+3w})=0
+\end{equation}
+故
+\begin{equation}\label{1.74}
+	\rho a^{3+3w}=\rho_0=constant
+\end{equation}
+其中$\rho_0$为$a=1$时的能量密度大小.故Friedmann第二方程\hyperref[1.61]{1.61}式可以改写为
+\begin{equation}\label{1.75}
+	\Big(\frac{da}{at}\Big)^2=\frac{A}{a^(3w+1)}
+\end{equation}
+其中$A\equiv \frac{8\pi G\rho_0}{3}=H_0^2+k$.不难发现，根据宇宙空间曲率的不同，我们有必要对不同空间曲率的宇宙进行分类讨论.\par
+\leftline{\textbf{ \ding{172}平坦宇宙$(k=0,\Omega_0=1)$}}
+这是最为简单的情形.宇宙空间没有弯曲，是平直的Euclid空间，这样的宇宙模型也被称为\textbf{Einstein-de~Sitter宇宙}.在该宇宙下,\hyperref[1.75]{1.75}式可写为
+\begin{equation}
+	\frac{da}{dt}=\sqrt{A}a^{-\frac{3w+1}{2}}
+\end{equation}
+将其写为积分的形式
+\begin{equation}
+	\int a^{\frac{3w+1}{2}}da=\int \sqrt{A}dt
+\end{equation}
+考虑初始条件$a(0)=0$，可以轻松解得
+\begin{equation}
+	a(t)=\Big[\frac{3w+3}{2}H_0t\Big]^{\frac{2}{3w+3}}
+\end{equation}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=6.5cm]{figures/k=0.eps}
+	\caption{平坦宇宙中不同物质组成下尺度因子的演化.}
+\end{figure}\par
+若取$w=0$,即宇宙为尘埃所主导的宇宙，此时有
+\begin{equation}
+	a(t)=\Big[\frac{3}{2}H_0t\Big]^{\frac{2}{3}}
+\end{equation} 
+不难发现，Hubble常数随时间的演化变为
+\begin{equation}
+	H(t)=\frac{2}{3t}
+\end{equation}
+故尘埃主导的Einstein-de~Sitter宇宙的年龄为
+\begin{equation}
+	t_0=\frac{2}{3}\frac{1}{H_0}
+\end{equation}
+若$H_0=50$,则
+\begin{equation}
+	t_0=\frac{2}{3}\times\frac{1}{50\times3.2\times10^{-20}}s\approx1.32\times10^{10}years\notag
+\end{equation}
+\leftline{\textbf{ \ding{173}封闭宇宙$(k=1,\Omega_0>1)$}}
+该情形下，\hyperref[1.75]{1.75}式可写为
+\begin{equation}\label{1.79}
+	\frac{da}{dt}=\sqrt{\frac{A}{a^{1+3w}}-1}
+\end{equation}
+倘若我们直接求解该微分方程，我们会发现这个方程难以求解，故我们引入如下参量：
+\begin{equation}
+	\eta =\int\frac{dt}{a(t)}
+\end{equation}
+因此有$dt=ad\eta$，参量$\eta$我们称其为\textbf{共形时间}.通过该变换，\hyperref[1.79]{1.79}式可写为
+\begin{equation}
+	\int d\eta=\int\frac{da}{\sqrt{\frac{A}{a^{3w-1}}-a^2}}
+\end{equation}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=6.5cm]{figures/k=1.eps}
+	\caption{封闭宇宙中不同物质组成下尺度因子的演化.}
+\end{figure}
+现在我们只要求解出右边的积分就可以了，对右边稍作变换，有
+\begin{equation}
+\int\frac{da}{\sqrt{\frac{A}{a^{3w-1}}-a^2}}=\int\frac{	a^{\frac{3w-1}{2}}}{\sqrt{A-a^{3w+1}}}da
+\end{equation}
+做变量替换$u=a^{\frac{3w+1}{2}}$,有
+\begin{align}
+	\int\frac{	a^{\frac{3w-1}{2}}}{\sqrt{A-a^{3w+1}}}da={}&
+	\int\frac{2}{3w+1}\frac{du}{\sqrt{A-u^2}}du\notag \\
+	={}&\frac{2}{3w+1}sin^{-1}\Big[\frac{u}{\sqrt{A}}\Big]+C\notag \\
+	={}&\frac{2}{3w+1}sin^{-1}\Big[\frac{a^{\frac{3w+1}{2}}}{\sqrt{A}}\Big]+C
+\end{align}
+其中C为积分常数.考虑初始条件$\eta=0,a=0$,可得
+\begin{equation}
+	a(\eta)=(H_0^2+1)^{\frac{1}{3w+1}}\Big[sin\Big(\frac{3w+1}{2}\eta\Big)\Big]^{\frac{2}{3w+1}}
+\end{equation}
+
+从图1.9可以看到，宇宙经历一段时间膨胀后又会重新收缩到一点.也就是说，整个宇宙的空间是封闭的，这也是为什么$k=1$的宇宙被称为封闭宇宙.\par
+\leftline{\textbf{ \ding{174}开放宇宙$(k=-1,\Omega_0<1)$}}\par 
+类似地，\hyperref[1.75]{1.75}式可写为
+\begin{equation}\label{1.79}
+	\frac{da}{dt}=\sqrt{\frac{A}{a^{1+3w}}+1}
+\end{equation}
+同样引入共形时间$\eta$,代入后得
+\begin{equation}
+		\int d\eta=\int\frac{da}{\sqrt{\frac{A}{a^{3w-1}}+a^2}}
+\end{equation}
+采用与封闭宇宙中类似的方法计算右边的积分:
+\begin{equation}
+	\int\frac{da}{\sqrt{\frac{A}{a^{3w-1}}+a^2}}=\int\frac{	a^{\frac{3w-1}{2}}}{\sqrt{A+a^{3w+1}}}da
+\end{equation}
+做变量替换$u=a^{\frac{3w+1}{2}}$,有
+\begin{align}\label{1.91}
+	\int\frac{	a^{\frac{3w-1}{2}}}{\sqrt{A-a^{3w+1}}}da={}&
+	\int\frac{2}{3w+1}\frac{du}{\sqrt{A+u^2}}du\notag \\
+	={}&\frac{2}{3w+1}ln(u+\sqrt{u^2+A})+C\notag \\
+	={}&\frac{2}{3w+1}ln(a^{\frac{3w+1}{2}}+\sqrt{a^{3w+1}+A})+C
+\end{align}
+其中$C$为积分常数，考虑到反双曲正弦函数的定义
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10cm,height=6.5cm]{figures/k=-1.eps}
+	\caption{开放宇宙中不同物质组成下尺度因子的演化.}
+\end{figure}
+\begin{equation}
+	sinh^{-1}x=ln(x+\sqrt{x^2+1})
+\end{equation}
+故\hyperref[1.91]{1.91}式可改写为
+\begin{equation}
+	\frac{2}{3w+1}ln(a^{\frac{3w+1}{2}}+\sqrt{a^{3w+1}+A})+C=\frac{2}{3w+1}sinh^{-1}\Big[\Big(\frac{a^{3w+1}}{A}\Big)^{\frac{1}{2}}\Big]+C
+\end{equation}
+考虑初始条件$\eta=0,a=0$,可得
+\begin{equation}
+	a(\eta)=(H^2_0+1)^{\frac{1}{3w+1}}\Big[sinh\Big(\frac{3w+1}{2}\eta\Big)\Big]^{\frac{2}{3w+1}}
+\end{equation}
+
+在该宇宙中，尺度因子以极快的速度增长，故称其为开放宇宙.\par 
+最后我们来总结一下，在对各种空间曲率进行分类讨论后得到了三种不同的演化方程，也决定了宇宙三种不同的演化模式.最后必须一提的是，我们这些推导出的结果必须在满足宇宙学基本原理的尺度下才成立.
+\section{其他的宇宙模型}
+待施工，下面内容与本节无关.\par
+\lipsum[1-3]
+\chapter{极早期宇宙}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -430,9 +740,10 @@ V(\chi_0)=\frac{4\pi(a\chi_0)^3}{3}+\cdots
 \end{equation}
 并且在无引力场，即处于Cartesian坐标系下时，仿射联络的各个分量都为0，此时上式退化为我们所熟知的Newton第二定律. \par 
 此时就可以验证其是协变的：
-\begin{equation}
-	\resizebox{.9\hsize}{!}{$\frac{d^2 \tilde{x}^{\tau}}{du^2}+\tilde{\Gamma}^{\tau}_{\sigma \rho}\frac{d\tilde{x}^{\sigma}}{du}\frac{d\tilde{x}^{\rho}}{du}= \frac{\partial \tilde{x}^{\tau}}{\partial x^{\lambda}}\frac{d^2   x^{\lambda}}{du^2}+\frac{\partial^2 \tilde{x}^{\tau}}{\partial x^{\alpha}\partial x^{\beta}}\frac{dx^{\alpha}}{du}\frac{dx^{\beta}}{du}+\frac{d\tilde{x}^{\sigma}}{du}\frac{d\tilde{x}^{\rho}}{du}\frac{\partial \tilde{x}^{\tau}}{\partial x^{\lambda}}\frac{\partial x^{\mu}}{\partial \tilde{x}^{\sigma}}\frac{\partial x^{\nu}}{\partial \tilde{x}^{\rho}}\Gamma^{\lambda}_{\mu \nu}-\frac{\partial^2 \tilde{x}^{\tau}}{\partial x^{\mu}\partial x^{\nu}}\frac{\partial x^{\mu}}{\partial \tilde{x}^{\sigma}}\frac{\partial x^{\nu}}{\partial \tilde{x}^{\rho}}\frac{d\tilde{x}^{\sigma}}{du}\frac{d\tilde{x}^{\rho}}{du} \notag$} %使用resizebox来自动调整公式字体大小
-\end{equation} \par 
+\begin{align}
+	\frac{d^2 \tilde{x}^{\tau}}{du^2}+\tilde{\Gamma}^{\tau}_{\sigma \rho}\frac{d\tilde{x}^{\sigma}}{du}\frac{d\tilde{x}^{\rho}}{du}={}& \frac{\partial \tilde{x}^{\tau}}{\partial x^{\lambda}}\frac{d^2   x^{\lambda}}{du^2}+\frac{\partial^2 \tilde{x}^{\tau}}{\partial x^{\alpha}\partial x^{\beta}}\frac{dx^{\alpha}}{du}\frac{dx^{\beta}}{du}\notag \\	
+	&+\frac{d\tilde{x}^{\sigma}}{du}\frac{d\tilde{x}^{\rho}}{du}\frac{\partial \tilde{x}^{\tau}}{\partial x^{\lambda}}\frac{\partial x^{\mu}}{\partial \tilde{x}^{\sigma}}\frac{\partial x^{\nu}}{\partial \tilde{x}^{\rho}}\Gamma^{\lambda}_{\mu \nu}-\frac{\partial^2 \tilde{x}^{\tau}}{\partial x^{\mu}\partial x^{\nu}}\frac{\partial x^{\mu}}{\partial \tilde{x}^{\sigma}}\frac{\partial x^{\nu}}{\partial \tilde{x}^{\rho}}\frac{d\tilde{x}^{\sigma}}{du}\frac{d\tilde{x}^{\rho}}{du} \notag
+\end{align} \par 
 注意到上式等式右边第二项与第四项正好抵消（哑指标的选取是任意的），故我们可以得到：
 \begin{equation}
 	\frac{d^2 \tilde{x}^{\tau}}{du^2}+\tilde{\Gamma}^{\tau}_{\sigma \rho}\frac{d\tilde{x}^{\sigma}}{du}\frac{d\tilde{x}^{\rho}}{du}=\frac{\partial \tilde{x}^{\tau}}{\partial x^{\lambda}}\textcolor{red}{\frac{d^2   x^{\lambda}}{du^2}}+\frac{\partial \tilde{x}^{\tau}}{\partial x^{\lambda}}\frac{\partial x^{\mu}}{\partial \tilde{x}^{\sigma}}\frac{\partial x^{\nu}}{\partial \tilde{x}^{\rho}}\frac{\partial \tilde{x}^{\sigma}}{\partial x^{\mu}}\frac{\partial \tilde{x}^{\rho}}{\partial x^nu}\textcolor{red}{\Gamma^{\lambda}_{\mu \nu}\frac{dx^{\mu}}{du}\frac{dx^{\nu}}{du}}
@@ -556,7 +867,7 @@ v'^{\rho}_{~;\sigma}={}&\frac{\partial v'^{\rho}}{\partial x^\sigma}+\Big[\frac{
 解释为坐标变换.即$x^\mu$和$\tilde{x}^\mu$是空间同一点的新旧坐标.但其也可以被赋予一种完全不同的含义：在选定的一种坐标系下，$x^\mu$和$\tilde{x}^\mu$代表两个不同的点,
 \hyperref[A.39]{A.39}式给出空间中点与点的一种对应关系，这种关系叫同一空间内的映射.\par 
 我们将讨论无穷小映射，即对应点的坐标差是无穷小量.它的一般表示式为
-\begin{equation}
+\begin{equation}\label{A.40}
 	\tilde{x}^\mu=x^\mu+\epsilon\xi^\mu
 \end{equation}
 这里$\xi^\mu=\xi^\mu(x)$是一个任意给定的矢量场，$\epsilon$是一个无穷小参量，$\xi^\mu$称为无穷小映射的生成元，因为它完全决定了一个无穷小映射.\par 
@@ -564,45 +875,117 @@ v'^{\rho}_{~;\sigma}={}&\frac{\partial v'^{\rho}}{\partial x^\sigma}+\Big[\frac{
 \begin{equation}
 	\mathcal{L}_{\xi}T(x)\equiv \lim_{\epsilon\rightarrow 0}\frac{T(Q)-T(P\Rightarrow Q)}{\epsilon}
 \end{equation}
-显然$(p,q)$阶张量的Lie导数仍是$(p,q)$阶张量.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+显然$(p,q)$阶张量的Lie导数仍是$(p,q)$阶张量.\par
+\leftline{\textbf{\ding{172}标量场的Lie导数}}\par
+我们定义
+\begin{equation}
+	\varphi(P\Rightarrow Q)=\varphi(P)
+\end{equation}
+这样就有
+\begin{align}\label{A.43}
+	\mathcal{L_{\xi}}\varphi(x)={}& \lim_{\epsilon\rightarrow 0}\frac{\varphi(Q)-\varphi(P\Rightarrow Q)}{\epsilon}\notag\\={}&\lim_{\epsilon\rightarrow 0}\frac{\varphi(Q)-\varphi(P)}{\epsilon}\notag\\={}&\lim_{\epsilon\rightarrow 0}\varphi_{,\mu}dx^\mu/\epsilon\notag\\={}&\varphi_{,\mu}\xi^\mu
+\end{align}
+\leftline{\textbf{\ding{173}逆变矢量场的Lie导数}}\par
+我们用直观的方式引入$k^{\mu}(P\Rightarrow Q)$.过P作一曲线$x^{\mu}=x^\mu(\lambda)$，使它在P点的切矢量就是$k^{\mu}(P)$.即
+\begin{equation}
+	k^{\mu}(P)=\Big(\frac{dx^\mu}{d\lambda}\Big)_P
+\end{equation}
+这样的$(dx^\mu)_P$好像是缩短的$k^\mu(P)$.曲线上截取两点$P$和$P'$（图A.1）,使$\overline{PP'}^\mu=(dx^\mu)_P$,即用它来表示$k^\mu(P)$.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=6cm,height=4cm]{figures/李.eps}
+	\caption{}
+\end{figure} 
+映射把$P$（坐标为$x^\mu$）对应到$Q$，有
+\begin{equation}
+	x^{\mu}_{Q}=x^\mu+\epsilon\xi^\mu(x)
+\end{equation}
+映射把$P'$（坐标为$x^\mu+dx^\mu$）对应到$Q'$，有
+\begin{equation}
+	x^{\mu}_{Q'}=x^\mu+dx^\mu+\epsilon\xi^\mu(x+dx)
+\end{equation}
+$\overline{QQ'}^\mu$作为$\overline{PP'}^\mu$的映射，它就代表了入$k^{\mu}(P\Rightarrow Q)$
+\begin{align}\label{A.47}
+	\delta x^\mu\equiv\overline{QQ'}^\mu={}&x^\mu+dx^\mu+\epsilon\xi^\mu(x+dx)-x^\mu-\epsilon\xi^\mu(x)\notag \\={}& dx^\mu+\epsilon \xi^{\mu}_{,\nu}dx^{\nu}
+\end{align}
+上式忽略了高阶小量.而上式只是对$(dx^\mu)_P$的映射，实际的$k^{\mu}(P\Rightarrow Q)$应是放大的$\overline{QQ'}^\mu$，它被定义为
+\begin{align}
+	k^{\mu}(P\Rightarrow Q)={}&\frac{\delta x^\mu}{d\lambda}\notag \\={}&\frac{dx^\mu}{d\lambda}+\epsilon\xi^{\mu}_{,\nu}(P)k^\nu(P)
+\end{align}
+可以看到，它的定义和$k^\mu(P)$很像.故$k^\mu(P)$的Lie导数为
+\begin{align}\label{A.49}
+		\mathcal{L_{\xi}}k^\mu(x)={}& \lim_{\epsilon\rightarrow 0}\frac{k^\mu(Q)-k^{\mu}(P\Rightarrow Q)}{\epsilon}\notag \\
+		={}&\lim_{\epsilon\rightarrow 0}\frac{k^\mu(Q)-k^{\mu}(P)}{\epsilon}-\xi^\mu_{,\nu}k^\nu \notag \\
+		={}&k^\mu_{,\nu}\xi^\nu-\xi^{\mu}_{,\nu}k^{\nu}
+\end{align}
+\leftline{\textbf{\ding{174}协变矢量场的Lie导数}}\par
+我们只需要求Lie导数也满足普通导数一样的乘法规则，那么就不需要再讨论任意阶张量在映射下的移动而是可以直接求出它们的Lie导数.对于协变矢量场$p_\mu(x)$的Lie导数.$p_\mu(x)$与任一$k^\mu$可构成一标量场.利用乘法规则，有
+\begin{equation}
+	\mathcal{L_{\xi}}(p_\mu k^\mu)=(\mathcal{L_{\xi}}p_\mu)k^\mu+p_\mu(	\mathcal{L_{\xi}}k^\mu)
+\end{equation}
+又由标量场的Lie导数公式\hyperref[A.43]{A.43}，有
+\begin{equation}
+	\mathcal{L_{\xi}}(p_\mu k^\mu)=(p_\mu k^\mu)_{,\sigma}\xi^\sigma=p_{\mu,\sigma}k^{\mu}\xi^{\sigma}+p_\mu k^\mu_{,\sigma}\xi^\sigma
+\end{equation}
+再将$k^\mu$的Lie导数公式\hyperref[A.49]{A.49}式代入上式，并考虑到$k^\mu$是任意的，我们就可以得到协变矢量场的Lie导数公式
+\begin{equation}
+\mathcal{L_{\xi}}p_\mu(x)=p_{\mu,\sigma}\xi^\sigma+\xi^\sigma_{,\mu}p_\sigma
+\end{equation}\par 
+对于高阶张量场可以用类似的方法来做.这里直接给出三个二阶张量的Lie导数公式
+\begin{equation}\label{A.53}
+	\mathcal{L_{\xi}}T_{\mu\nu}=T_{\mu\nu,\rho}\xi^\rho+T_{\rho\nu}\xi^\rho_{,\mu}+T_{\mu\rho}\xi^\rho_{,\nu}
+\end{equation}
+\begin{equation}
+	\mathcal{L_{\xi}}T^{\mu}_\nu=T^\mu_{\nu,\rho}\xi^\rho-T^\rho_{\nu}\xi^\mu_{,\rho}+T^{\mu}_\rho\xi^\rho_{,\nu}
+\end{equation}
+\begin{equation}
+	\mathcal{L_{\xi}}T^{\mu\nu}=T^{\mu\nu}_{,\rho}\xi^\rho+T^{\rho\nu}\xi^\mu_{,\rho}+T^{\mu\rho}\xi^\nu_{,\rho}
+\end{equation}
+对于Lie导数应注意两个特点.首先，它不仅取决于被求导的张量场，还取决与映射的生成元.其次，它不需要先有联络.但是如果规定了联络，Lie导数也可以用协变导数来表示,只需把上面张量场的普通导数改为协变导数即可，但容易验证，所有显含联络的项会自动抵消.\par 
+最后我们来计算一下度规张量的Lie导数.利用式\hyperref[A.53]{A.53}，并把其中的普通导数改为协变导数，得到
+\begin{equation}
+\mathcal{L_{\xi}}g_{\mu\nu}	=g_{\mu\nu;\rho}\xi^\rho+g_{\rho\nu}\xi^\rho_{;\mu}+g_{\mu\rho}\xi^\rho_{;\nu}
+\end{equation}
+又由于度规张量的协变导数为0，它化为
+\begin{equation}\label{A.57}
+\mathcal{L_{\xi}}g_{\mu\nu}	=\xi_{\mu;\nu}+\xi_{\nu;\mu}
+\end{equation}
+\section{等度规映射与Killing矢量场}
+$P$和$Q$是一对相邻点，坐标差为$dx^\mu$，因此距离不变的平方是
+\begin{equation}\label{A.58}
+	ds_{PQ}^2=g_{\mu\nu}(P)=dx^\mu dx^\nu
+\end{equation}
+无穷小映射\hyperref[A.40]{A.40}式把它们分别对应到$P'$和$Q'$.设$P'$和$Q'$的坐标差为$\delta x^\mu$，则此时距离不变的平方为
+\begin{equation}\label{A.59}
+	ds_{P'Q'}^2=g_{\mu\nu}(P')=\delta x^\mu \delta x^\nu
+\end{equation}
+如果对任意一对相邻点都有映射前后的不变距离相等的性质，即
+\begin{equation}\label{A.60}
+	ds_{PQ}^2=	ds_{P'Q'}^2
+\end{equation}
+那么该映射称为\textbf{等度规映射}.等度规映射的生成元$\xi^\mu(x)$就叫\textbf{Killing矢量场}.那么这个矢量场具有什么样的性质呢？\par 
+$\xi^\mu(x)$所遵循的方程可以直接导出.由于$P$和$P'$是映射的对应点，坐标差$\epsilon \xi^\mu$，所以
+\begin{equation}\label{A.61}
+	g_{\mu\nu}(P')=g_{\mu\nu}(P)+g_{\mu\nu,\lambda}(P)\epsilon\xi^\lambda
+\end{equation}
+再由于$P'Q'$是$PQ$的映射,由\hyperref[A.47]{A.47}式可知
+\begin{equation}\label{A.62}
+	\delta x^\mu=dx^\mu+\epsilon\xi^\mu_{,\lambda}dx^\lambda
+\end{equation}
+将上式与\hyperref[A.61]{A.61}式代入\hyperref[A.59]{A.59}式，并与\hyperref[A.58]{A.58}式作比较，我们得到
+\begin{equation}
+	g_{\mu\nu,\lambda}\xi^\lambda+g_{\lambda\nu}\xi^\lambda_{,\mu}+g_{\mu\lambda}dx^\lambda=0
+\end{equation}
+由\hyperref[A.53]{A.53}式可以看出，其等价于
+\begin{equation}
+		\mathcal{L_{\xi}}(g_{\mu\nu})=0
+\end{equation}
+再根据\hyperref[A,57]{A.57}式，其也可表述为
+\begin{equation}
+	\xi_{\mu;\nu}+\xi_{\nu;\mu}=0
+\end{equation}
+这就是Killing矢量场所需要满足的方程，也称为Killing方程.\par 
+Killing矢量场的概念的作用是刻画时空结构的\textbf{几何对称性质}.当Riemann空间具有时间平移不变性时，相应的Killing矢量场就是沿时间轴方向的平移矢量.当Riemann空间在某方向上具有空间平移不变性，相应的Killing矢量场就是沿该方向的平移矢量.Killing矢量场也可以刻画空间的转动对称性和其他更为复杂的对称性.
 \section{相对论性与非相对论性理想流体}
 在广义相对论中，很多物质系统都可作为流体来处理.此处我们只讨论理想流体，即不可压缩的，黏度为0的流体.或者用更加“相对论”的话来讲，就是仅用与流体共动的局部惯性系中测得的能量密度$\rho$和各向同性压强$p$写的流体.理想流体忽略了真实流体中的剪切、粘滞、压缩、耗散、热传导等效应.\par 
 首先我们来看看非相对论性的理想流体，其运动可用如下方程组来描写：
@@ -616,7 +999,7 @@ v'^{\rho}_{~;\sigma}={}&\frac{\partial v'^{\rho}}{\partial x^\sigma}+\Big[\frac{
 \begin{equation}\label{A.26}
 	T^{\mu \nu }=p\eta^{\mu \nu }+(\rho +p)U^{\mu }U^{\nu}
 \end{equation}
-其中$\rho$和 $p$分别称为固有能量密度和压强.它们是在测量时刻正好与流体共动的局部惯性系中观测者所测得的密度与压强.$U^\mu=p^\mu/m$,为四维速度矢量.理想流体的粒子流密度4矢量是
+其中$\rho$和 $p$分别称为固有能量密度和压强.它们是在测量时刻正好与流体共动的局部惯性系中观测者所测得的密度与压强.$U^\mu=p^\mu/m=(1,0,0,0)$,为流体的伴随惯性系中的四维速度矢量.理想流体的粒子流密度4矢量是
 \begin{equation}
 	N^{\mu}=nU^{\mu}
 \end{equation}
